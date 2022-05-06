@@ -1,17 +1,10 @@
 // Users hardcoded for simplicity, store in a db for production applications
 const users = [{
     id: 1,
-    username: "test",
-    password: "test",
-    firstName: "Test",
-    lastName: "Test"
-},
-{
-    id: 2,
-    username: "test1",
-    password: "test1",
-    firstName: "Test1",
-    lastName: "Test1"
+    username: "jhcis",
+    password: "jhcis",
+    firstName: "jhcis",
+    lastName: "moph"
 }]
 
 module.exports = {

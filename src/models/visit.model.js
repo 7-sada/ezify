@@ -11,7 +11,7 @@ const Visit = (visit) => {
 Visit.findByVisitno = (visitno, result) => {
     knex('visit')
         .where('visitno', visitno)
-        .select('visitno', 'visitdate', 'symptoms', 'weight', 'height', 'pressure', 'temperature', 'pulse', 'o2satuation', 'respri', 'dateupdate')
+        .select('visitno', 'pid', 'visitdate', 'symptoms', 'weight', 'height', 'pressure', 'temperature', 'pulse', 'o2satuation', 'respri', 'dateupdate')
         .then((visit) => {
             if (visit.length) {
                 result(null, visit[0])
