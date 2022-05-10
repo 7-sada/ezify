@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser")
 const basicAuth = require('./src/_helpers/basic-auth');
 const errorHandler = require('./src/_helpers/error-handler');
+const province = require('./src/_helpers/check-province');
 require('dotenv').config();
 
 // create express app
@@ -12,9 +13,18 @@ const app = express()
 // };
 // app.use(cors(corsOptions));
 app.use(cors());
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // use basic HTTP auth to secure the api
 app.use(basicAuth);
+
+// Middleware check province
+app.use(province)
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -23,6 +33,7 @@ app.use(bodyParser.urlencoded({
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
+
 
 // define a root route
 // app.get('/', (req, res) => {
