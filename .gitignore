@@ -3,4 +3,11 @@ node_modules
 
 /build/*
 
+api specification for test.pdf
+Api Specification.pdf
+api specification.pptx
+Required APIs to send Vitals to health Department.pdf
+*.pdf
+*.pptx
+
 .git
