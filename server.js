@@ -46,9 +46,10 @@ app.use(errorHandler);
 
 // setup server port
 // const port = process.env.PORT || 5000
-const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
+// const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
 
 // listen for requests
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
+    const port = server.address().port;
     console.log(`Server is running  on Port ${port}`);
 })
