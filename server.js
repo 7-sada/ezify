@@ -46,7 +46,7 @@ app.use(errorHandler);
 
 // setup server port
 // const port = process.env.PORT || 5000
-const port = process.env.NODE_ENV === 'production' ? 80 : 5000;
+const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
 
 // listen for requests
 app.listen(port, () => {
