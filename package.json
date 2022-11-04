@@ -2,7 +2,8 @@
   "name": "jhcis-ezify",
   "version": "1.0.0",
   "engines": {
-    "node": "16.17.0"
+    "node": "16.17.0",
+    "npm": "8.5.0"
   },
   "description": "",
   "main": "server.js",
