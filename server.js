@@ -36,10 +36,10 @@ app.use(bodyParser.json())
 
 
 // define a root route
-app.get('/', (req, res) => {
-    res.json("Hello world")
-})
-//require('./src/routes/index.routes.js')(app)
+// app.get('/', (req, res) => {
+//     res.json("Hello world")
+// })
+require('./src/routes/index.routes.js')(app)
 
 // global error handler
 app.use(errorHandler);
