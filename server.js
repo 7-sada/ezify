@@ -46,9 +46,11 @@ app.use(errorHandler);
 
 // setup server port
 // const port = process.env.PORT || 5000
-const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
+const port = process.env.PORT || 8080
+//const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
 
 // listen for requests
-app.listen(5000, () => {
-    console.log(`Server is running  on Port 5000`);
+var listener = app.listen(port, () => {
+    //console.log(`Server is running  on Port ${listener.address()}`);
+    console.log(listener.address().port);
 })
