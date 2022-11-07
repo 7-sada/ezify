@@ -49,6 +49,6 @@ app.use(errorHandler);
 const port = process.env.NODE_ENV === 'production' ? 5000 : 5000;
 
 // listen for requests
-app.listen(port, () => {
-    console.log(`Server is running  on Port ${port}`);
+app.listen(5000, () => {
+    console.log(`Server is running  on Port 5000`);
 })
